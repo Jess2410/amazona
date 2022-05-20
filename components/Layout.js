@@ -28,6 +28,10 @@ export default function Layout({children, title, description}) {
             fontWeight: 'normal',
         },
         },
+        form: {
+            maxWidth: 800,
+            margin: '0 auto',
+          },
     palette:{
         type: darkMode ? 'dark':'light',
         primary: {
@@ -66,7 +70,6 @@ export default function Layout({children, title, description}) {
                 <div>
                     <Switch checked={darkMode} onChange={darkModeChangeHandler} />
                     <NextLink href='/cart' passHref>  
-                  
                         <MUILink>  
                             {cart.cartItems.length > 0 ? (
                         <Badge badgeContent={cart.cartItems.length} color='secondary'>Cart</Badge>
